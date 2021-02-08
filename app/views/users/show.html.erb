@@ -1,0 +1,30 @@
+<h1 align ="center"> <%= @user.firstname %> </h1>
+<h2> Personal Information </h2>
+
+<p>
+	<%= @user.firstname %>
+	<%= @user.lastname %><br>
+	<%= @user.email %><br>
+	<%= @user.contact %><br>
+	<%= @user.gender %><br>
+	<%= @user.dob %><br>
+	<%= @user.address %><br>
+</p>
+	
+<h2> Professional Information </h2>
+
+<p>
+	<%= @user.company %>
+	<%= @user.workLocation %><br>
+	<%= @user.companyMail %><br>
+	<%= @user.technology %><br>
+	<%= @user.experience %><br>
+	<%= @user.salary %><br>
+</p>	
+
+<ul>
+  <li><%= link_to "Edit", edit_user_path(@user) %></li>
+  <li><%= link_to "Destroy", user_path(@user),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>
